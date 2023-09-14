@@ -1,0 +1,18 @@
+<div class="container">
+    <h1>New restaurant</h1>
+
+    <%= simple_form_for(@restaurant) do |f| %>
+    <%= f.input :name, label: 'Restaurant Name' %>
+    <%= f.input :address, label: 'Address' %>
+    <%= f.input :phone_number, label: 'Phone Number' %>
+    <%= f.input :category, label: 'Category' %>
+    <%= f.button :submit, class: 'btn btn-success' %>
+    <% end %>
+
+    <br>
+
+    <div>
+    <%= link_to "Back to restaurants", restaurants_path %>
+    </div>
+</div>
+

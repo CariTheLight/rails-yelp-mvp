@@ -1,0 +1,33 @@
+<div class="container" class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+
+<h1>Restaurants</h1>
+<br>
+<div class="card-product">
+    <ul>
+        <% @restaurants.each do |restaurant| %>
+        <p>
+            <strong>Name:</strong>
+            <%= restaurant.name %>
+        </p>
+        <p>
+            <strong>Address:</strong>
+            <%= restaurant.address %>
+        </p>
+        <p>
+            <strong>Contact details:</strong>
+            <%= restaurant.phone_number %>
+        </p>
+        <p>
+            <strong>Category:</strong>
+            <%= restaurant.category %>
+        </p> 
+</div>
+
+        <%= link_to "Show this restaurant", restaurant %>
+        <br>  
+        <% end %>
+    </ul>
+        <%= link_to "New Restaurant", new_restaurant_path %>
+</div>
+
+
